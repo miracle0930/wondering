@@ -12,8 +12,10 @@ const App = () => {
 
 }
 
+const prefix = '/wondering'
+
 const routes = {
-  bfs_vs_dfs: '/bfs-vs-dfs'
+  bfs_vs_dfs: prefix + '/bfs-vs-dfs'
 }
 
 export default App;

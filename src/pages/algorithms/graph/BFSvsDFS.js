@@ -25,26 +25,26 @@ const BFSvsDFS = () => {
     return res;
   }
 
-  // useEffect(() => {
-  //   const threshold = Math.ceil(rows * cols * 0.3);
-  //   const blocked = [];
-  //   const blockInit = () => {
-  //     while (blocked.length < threshold) {
-  //       const x = parseInt(Math.random() * rows);
-  //       const y = parseInt(Math.random() * cols);
-  //       if ((x === 0 && y === 0) || (x === rows - 1 && y === cols - 1) || blocked.filter((e) => e.x === x && e.y === y).length > 0) {
-  //         continue;
-  //       }
-  //       blocked.push({ x, y });
-  //     }
-  //     setBlocked(blocked);
-  //   }
-  //   blockInit();
-  // }, [])
+  useEffect(() => {
+    const threshold = Math.ceil(rows * cols * 0.3);
+    const blocked = [];
+    const blockInit = () => {
+      while (blocked.length < threshold) {
+        const x = parseInt(Math.random() * rows);
+        const y = parseInt(Math.random() * cols);
+        if ((x === 0 && y === 0) || (x === rows - 1 && y === cols - 1) || blocked.filter((e) => e.x === x && e.y === y).length > 0) {
+          continue;
+        }
+        blocked.push({ x, y });
+      }
+      setBlocked(blocked);
+    }
+    blockInit();
+  }, [])
 
   const getBlocks = () => {
     reset();
-    const threshold = Math.ceil(rows * cols * 0.2);
+    const threshold = Math.ceil(rows * cols * 0.3);
     const blocked = [];
     while (blocked.length < threshold) {
       const x = parseInt(Math.random() * rows);

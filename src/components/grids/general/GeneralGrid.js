@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import styles from './generalGrid.scss';
 import PropTypes from 'prop-types';
 
-const GeneralGrid = ({ rows, cols, gridStyles, blocked, searched }) => {
+const GeneralGrid = ({ rows, cols, gridStyles, blocked, searched, path }) => {
 
   const { cellStyle, containerStyle } = gridStyles;
 
@@ -33,6 +33,7 @@ const GeneralGrid = ({ rows, cols, gridStyles, blocked, searched }) => {
           return colsHelper.map((_, colIndex) => {
             const isBlocked = blocked.filter((e) => e.x === rowIndex && e.y === colIndex).length > 0;
             const isSearched = searched.filter((e) => e.x === rowIndex && e.y === colIndex).length > 0;
+            const isPath = path.filter((e) => e.x === rowIndex && e.y === colIndex).length > 0;
             const maxDepth = searched.length > 0 && searched[searched.length - 1].depth;
             let searchedDepth = 0;
             if (isSearched) {
@@ -48,7 +49,7 @@ const GeneralGrid = ({ rows, cols, gridStyles, blocked, searched }) => {
                   borderWidth: '1px',
                   height: `calc(600px / ${Math.max(rowsHelper.length, colsHelper.length)})`,
                   width: `calc(600px / ${Math.max(rowsHelper.length, colsHelper.length)})`,
-                  backgroundColor: isBlocked ? 'gray' : isSearched ? `rgba(255,123,123, ${searchedDepth / maxDepth})` : 'white',
+                  backgroundColor: isBlocked ? 'gray' : isPath ? 'blue' : isSearched ? `rgba(255,123,123, ${searchedDepth / maxDepth})` : 'white',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
@@ -67,7 +68,8 @@ GeneralGrid.defaultProps = {
   cols: 0,
   gridStyles: {},
   blocked: [],
-  searched: []
+  searched: [],
+  path: []
 }
 
 GeneralGrid.propTypes = {
@@ -75,7 +77,8 @@ GeneralGrid.propTypes = {
   cols: PropTypes.number.isRequired,
   gridStyles: PropTypes.object,
   blocked: PropTypes.array,
-  searched: PropTypes.array
+  searched: PropTypes.array,
+  path: PropTypes.array
 }
 
 export default GeneralGrid;

@@ -1,10 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import BFSvsDFS from './pages/algorithms/graph/BFSvsDFS';
+import { Route, Switch } from 'react-router-dom';
 
-function App() {
-  return <BFSvsDFS />
+const App = () => {
+
+  return (
+    <Switch>
+      <Route path={routes.bfs_vs_dfs} exact component={BFSvsDFS} />
+    </Switch>
+  )
+
+}
+
+const routes = {
+  bfs_vs_dfs: '/bfs-vs-dfs'
 }
 
 export default App;

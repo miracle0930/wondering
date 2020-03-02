@@ -67,7 +67,6 @@ const BFSvsDFS = () => {
 
     while (queue.length > 0) {
       const current = queue.shift();
-
       if (current.x === rows - 1 && current.y === cols - 1) {
         break;
       }
@@ -101,8 +100,8 @@ const BFSvsDFS = () => {
 
   const reset = () => {
     setSearched([]);
-    setBfsTitle('Start BFS');
-    setDfsTitle('Start DFS');
+    setBfsTitle('Breadth');
+    setDfsTitle('Depth');
     setBfsComplete(false);
     setDfsComplete(false);
   }

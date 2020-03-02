@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ab2cbb1ab9c5f6578ed50fe723d70e08",
+    "revision": "b5268a9e62462cd572abacbbcd89fba1",
     "url": "/wondering/index.html"
   },
   {
-    "revision": "fece180c39a22d577eed",
-    "url": "/wondering/static/css/main.d1b05096.chunk.css"
+    "revision": "8d3ca62bb9c68c95ec14",
+    "url": "/wondering/static/css/main.abb087ae.chunk.css"
   },
   {
-    "revision": "c64e40afae8aee79d8c4",
-    "url": "/wondering/static/js/2.d6587bcf.chunk.js"
+    "revision": "b30621e4ffad67524557",
+    "url": "/wondering/static/js/2.44a90eb8.chunk.js"
   },
   {
     "revision": "5356fa2f66e46e6c05e4cbe319ac7f1d",
-    "url": "/wondering/static/js/2.d6587bcf.chunk.js.LICENSE.txt"
+    "url": "/wondering/static/js/2.44a90eb8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fece180c39a22d577eed",
-    "url": "/wondering/static/js/main.b39d2a1a.chunk.js"
+    "revision": "8d3ca62bb9c68c95ec14",
+    "url": "/wondering/static/js/main.5cd9e12c.chunk.js"
   },
   {
     "revision": "4f97f99c7fd0d7e7efb1",

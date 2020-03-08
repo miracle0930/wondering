@@ -13,8 +13,6 @@ const ReduxHook = (props) => {
 
   const dispatch = useDispatch();
 
-  const useMiddlewaredActions = useActions(middlewaredActionCreator, []);
-
   useEffect(() => {
     console.log(dev.testRes);
   }, [dev])

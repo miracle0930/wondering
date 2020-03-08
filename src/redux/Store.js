@@ -9,6 +9,7 @@ export default function configuteStore(initialState={}) {
   let finalCreateStore = applyMiddleware(thunkMiddleware)(createStore);
   if (isDebugMode) {
     finalCreateStore = composeWithDevTools(applyMiddleware(thunkMiddleware))(createStore);
+    // finalCreateStore = createStore;
   }
   return finalCreateStore(reducer, initialState);
 }
